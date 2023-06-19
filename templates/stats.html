@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Statistics{% endblock %}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">New URL</th>
+                <th scope="col">Original URL</th>
+                <th scope="col">No. of Clicks</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in urls %}
+                <tr>
+                    <th scope="row">{{ url['id'] }}</th>
+                    <td>
+                        {% if url['alias'] %}
+                            {{ request.host_url }}{{ url['alias'] }}
+                        {% else %}
+                            {{ url['short_url'] }}
+                        {% endif %}
+                    </td>
+                    <td>{{ url['original_url'] }}</td>
+                    <td>{{ url['clicks'] }}</td>
+                    <td>{{ url['created'] }}</td>
+                    <td>{{ url['notes'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

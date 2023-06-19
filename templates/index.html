@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Welcome to ShortLy{% endblock %}</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="url">URL</label>
+            <div class="input-group">
+                <input type="text" name="url" placeholder="Long URL" class="form-control" value="{{ request.form['url'] }}" autofocus>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="clearUrlField()">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="alias">Customize your Link</label>
+            <input type="text" name="alias" placeholder="Custom alias (optional)" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Description</label>
+            <input type="text" name="notes" placeholder="Add notes (optional)" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Shorten URL</button>
+        </div>
+    </form>
+
+    {% if short_url %}
+        <hr>
+        <div class="mt-4">
+            <h4>Customized URL:</h4>
+            <p>{{ short_url }}</p>
+            <a href="{{ short_url }}" class="btn btn-success" target="_blank">Go to URL</a>
+            <button class="btn btn-primary" onclick="copyToClipboard('{{ short_url }}')">Copy URL</button>
+        </div>
+    {% endif %}
+
+    <script>
+        function copyToClipboard(url) {
+            const el = document.createElement('textarea');
+            el.value = url;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('URL copied to clipboard!');
+        }
+
+        function clearUrlField() {
+            document.querySelector('input[name="url"]').value = '';
+        }
+    </script>
+{% endblock %}
