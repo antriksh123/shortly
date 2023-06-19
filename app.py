@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from datetime import datetime
 
 app = Flask(__name__)
-
+# antrikhs
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
