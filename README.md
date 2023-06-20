@@ -22,7 +22,8 @@ Shortly is built using the following technologies:
 - Flask: A lightweight web framework for Python.
 - Bootstrap 5: A popular CSS framework for building responsive and stylish web interfaces.
 - CSS: Cascading Style Sheets for customizing the application's appearance.
-- SQLite: A lightweight and embedded database used for storing URL and statistics data.
+- SQLite: A lightweight and embedded database storing URL and statistics data.
+- Azure: Used for deployment of website 
 
 ## The Working
 - The application uses SQLite as the database to store URL data and user information.
