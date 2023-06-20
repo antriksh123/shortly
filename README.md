@@ -1,4 +1,12 @@
 # shortly
-A url shortner web application
-## Discription
-This URL shortening service is developed using Python and Flask framework. It allows you to shorten long URLs into compact and shareable links.
+A URL shortener web application
+## Description
+This URL-shortening service is developed using Python and Flask frameworks. It allows you to shorten long URLs into compact and shareable links.
+## How to run the project ?
+run the project
+## The working 
+explain
+## key takeaways 
+key 
+## References 
+
