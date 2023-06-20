@@ -3,7 +3,7 @@
 {% block content %}
     <h1>{% block title %}Search Results{% endblock %}</h1>
 
-    <form action="{{ url_for('search') }}" method="get">
+    <form class="search-form" action="{{ url_for('search') }}" method="get">
         <input type="text" name="query" placeholder="Enter your search query" value="{{ search_query or '' }}">
         <input type="submit" value="Search">
     </form>
@@ -13,7 +13,7 @@
             <tr>
                 <th scope="col">S.No.</th>
                 <th scope="col">New URL</th>
-                <th scope="col">Original</th>
+                <th scope="col">Original URL</th>
                 <th scope="col">No. of clicks</th>
                 <th scope="col">Date Created</th>
                 <th scope="col">Description</th>

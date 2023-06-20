@@ -7,6 +7,65 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,600;1,700&family=Pacifico&display=swap" rel="stylesheet">
+    <style> 
+        h1 {
+          margin-top: 30px; /* Add top margin */
+          margin-bottom: 30px;
+          font-family: 'Pacifico', cursive;/* Apply custom font */
+          color: #0077b6 ;
+        }
+        .search-form {
+          display: flex;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+          width: 600px; /* Adjust the desired width here */
+          margin-right: 10px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Cabin', sans-serif; /* Update the font family */
+            background-color: #CAF0F8; /* Set the background color */
+        }
+
+        .navbar {
+            background-color: #012A4A !important; /* Set the navbar background color */
+        }
+
+        .navbar-brand {
+            color: #90E0EF !important; /* Set the navbar brand text color */
+            font-size: 24px; /* Increase the font size */
+            /* font-weight: bold; Apply bold font weight */
+            font-family: 'Pacifico', cursive;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important; /* Set the navbar link text color */
+        }
+
+        .navbar-text {
+            color: #90E0EF !important; /* Set the navbar text color */
+            margin-right: 10px; /* Add some right margin */
+        }
+
+        footer {
+            background-color: #012A4A; /* Set the footer background color */
+            color: #fff;
+            padding: 20px 0; /* Add some padding */
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        footer p {
+            margin-bottom: 0; /* Remove bottom margin for the footer text */
+        }
+    </style>
 
     <title>{% block title %}ShortLy{% endblock %}</title>
 </head>
