@@ -28,7 +28,7 @@ Shortly is built using the following technologies:
 - The application uses SQLite as the database to store URL data and user information.
 - It utilizes the Flask framework, along with other packages like hashids for generating short aliases, Flask-Login for user authentication, and Werkzeug for password hashing.
 - The application consists of several routes:
--- '/': The main route where authenticated users can shorten URLs. It handles both GET and POST requests. When a POST request is received, it checks if the URL is already present in the database and updates it if necessary. If it's a new URL, it generates a short URL and saves it in the database.
+-   '/': The main route where authenticated users can shorten URLs. It handles both GET and POST requests. When a POST request is received, it checks if the URL is already present in the database and updates it if necessary. If it's a new URL, it generates a short URL and saves it in the database.
 -- '/register': Handles user registration. It saves the username and hashed password in the database.
 -- '/login': Handles user login. It compares the provided username and password with the stored values in the database, and if they match, logs the user in.
 -- '/logout': Logs out the currently authenticated user.
@@ -43,9 +43,11 @@ Shortly is built using the following technologies:
 
 ## Key Takeaways
 - Building a URL shortener using Python and Flask.
-- Using SQLite for data storage and retrieval.
-- Implementing click tracking and statistics generation.
-- Integrating Bootstrap 5 for responsive and appealing user interfaces.
+- Working with SQLite database for storing URL and user data.
+- User authentication and session management using Flask-Login.
+- Using Bootstrap and CSS for styling the web interface.
+- Handling form submissions and data validation.
+- Implementing search functionality to filter URLs based on keywords.
 
 ## References
 - https://flask.palletsprojects.com/en/2.3.x/
