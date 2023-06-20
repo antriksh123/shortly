@@ -1,6 +1,9 @@
 # Shortly
 A URL shortener web application
 
+## Visit the application 
+- https://urlshortly.azurewebsites.net/
+
 ## Description
 Shortly is a URL-shortening service developed using Python and Flask frameworks. It allows you to shorten long URLs into compact and shareable links. With Shortly, you can easily create shorter and more manageable URLs for sharing on social media platforms, email, or any other medium.
 
