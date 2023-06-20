@@ -25,7 +25,21 @@ Shortly is built using the following technologies:
 - SQLite: A lightweight and embedded database used for storing URL and statistics data.
 
 ## The Working
-Shortly works by taking a long URL input from the user and generating a unique shortened URL. When a user visits the shortened URL, they are redirected to the original long URL. The application tracks the number of clicks on each shortened URL and provides statistics for the user.
+- The application uses SQLite as the database to store URL data and user information.
+- It utilizes the Flask framework, along with other packages like hashids for generating short aliases, Flask-Login for user authentication, and Werkzeug for password hashing.
+- The application consists of several routes:
+-- '/': The main route where authenticated users can shorten URLs. It handles both GET and POST requests. When a POST request is received, it checks if the URL is already present in the database and updates it if necessary. If it's a new URL, it generates a short URL and saves it in the database.
+-- '/register': Handles user registration. It saves the username and hashed password in the database.
+-- '/login': Handles user login. It compares the provided username and password with the stored values in the database, and if they match, logs the user in.
+-- '/logout': Logs out the currently authenticated user.
+-- '/<alias>': Redirects the user to the original URL associated with the provided alias.
+-- '/stats': Displays the statistics for the URLs created by the currently authenticated user. It retrieves the URL data from the database and generates short URLs for display.
+-- '/search': Allows users to search for URLs based on notes, original URLs, or aliases. It retrieves the matching URLs from the database and generates short URLs for display.
+-- '/about': Displays information about the application and its author.
+- The application utilizes templates (index.html, register.html, login.html, stats.html, search.html, about.html) to render HTML pages with dynamic content.
+- User authentication is handled using the User class, which extends the UserMixin class from Flask-Login. It provides methods for loading users from the database and managing user sessions.
+- Flash messages are used to display notifications and error messages to the user.
+- The application runs on the local development server when the script is executed directly.
 
 ## Key Takeaways
 - Building a URL shortener using Python and Flask.
